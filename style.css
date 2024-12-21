@@ -11,10 +11,15 @@ header {
     color: black;
 }
 
+.button-container {
+    text-align: center; /* Центровка кнопок по горизонтали */
+    margin-top: 10px; /* Отступ сверху */
+}
+
 button {
-    position: fixed;
     top: 10px;
-    right: 10px;
+    display: inline-block; /* Кнопки в одной строке */
+    margin: 10px; /* Расстояние между кнопками */
     font-size: 1.5em;
     border-radius: 10px;
     border: none;
@@ -43,8 +48,6 @@ button:hover {
     button {
         font-size: 1.2em; /* Уменьшаем кнопку */
         padding: 8px 16px;
-        top: 5px;
-        right: 5px;
     }
 }
 
@@ -62,7 +65,5 @@ button:hover {
     button {
         font-size: 1em; /* Уменьшаем размер кнопки */
         padding: 6px 12px;
-        top: 5px;
-        right: 5px;
     }
 }

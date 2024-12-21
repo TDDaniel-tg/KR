@@ -13,7 +13,8 @@ header {
 
 button {
     position: fixed;
-    
+    left: 50%; /* Центрируем по горизонтали относительно экрана */
+    transform: translateX(-50%); /* Сдвигаем кнопку влево на половину её ширины */
     font-size: 1.5em;
     border-radius: 10px;
     border: none;
