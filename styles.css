@@ -73,12 +73,12 @@ label {
 /* Адаптация под смартфоны */
 @media (max-width: 480px) {
     button {
-        font-size: 0.8em; /* Ещё меньше для маленьких экранов */
+        font-size: 1.2em; /* Ещё меньше для маленьких экранов */
 
     }
 
     div {
-        font-size: 0.8em;
+        font-size: 1.2em;
         margin-top: 15px;
     }
 
