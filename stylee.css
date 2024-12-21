@@ -63,5 +63,7 @@ button:hover {
         padding: 6px 12px;
         left: 50%; /* Центрируем по горизонтали относительно экрана */
         transform: translateX(-50%); /* Сдвигаем кнопку влево на половину её ширины */  
+    margin-top: 70px;
     }
+    
 }
