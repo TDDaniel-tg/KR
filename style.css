@@ -1,19 +1,55 @@
-body{
+body {
     background-color: #B4b4b4;
     font-size: 1.5em;
 }
 
-header{
+header {
     text-align: center;
     margin-top: 50px;
     color: black;
 }
 
-button{
-   position: fixed;
-   top: 10px;
-   right: 10px;
-   font-size: 1.5em;
-   border-radius: 10px;
-   border: 200px
+button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+}
+
+/* Адаптация под мобильные устройства */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2em; /* Уменьшаем размер шрифта */
+    }
+
+    header {
+        font-size: 1.8em; /* Увеличиваем заголовок */
+        margin-top: 30px;
+    }
+
+    button {
+        font-size: 1.2em; /* Уменьшаем кнопку */
+        padding: 8px 16px;
+        top: 5px;
+        right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1em; /* Ещё больше уменьшаем шрифт */
+    }
+
+    header {
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 6px 12px;
+    }
 }
