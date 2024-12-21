@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-   
+
 <link rel="stylesheet" href="styles.css">
 
 <head>
@@ -21,7 +21,7 @@
 
             <div class="form-group">
                 <label class="form-label">Номер телефона</label>
-                <input type="" name="number" class="form-control">
+                <input type="text" name="number" class="form-control">
             </div>
            
 
@@ -39,8 +39,8 @@
                 <label class="form-label">Возраст</label>
                 <input type="number" name="age" class="form-control">
             </div>
-      
-
+           
+            
             <button type="submit" class="btn btn-primary mt-4">Отправить</button>
         </form>
     </div>
@@ -61,13 +61,21 @@ document.getElementById('tg').addEventListener('submit', function(e) {
     message += `<b>ФИО:</b> ${this.name.value}\n`;
     message += `<b>Номер телефона:</b> ${this.number.value}\n`;
     message += `<b>Город:</b> ${this.city.value}\n`;
-    message += `<b>Весовая :</b> ${this.heigh.value}\n`;
+    message += `<b>Весовая:</b> ${this.heigh.value}\n`;
     message += `<b>Возраст:</b> ${this.age.value}\n`;
 
     axios.post(URI_API, {
         chat_id: CHAT_ID,
         parse_mode: 'html',
         text: message
+    })
+    .then(() => {
+        // Перенаправление на страницу Index.html после успешной отправки
+        window.location.href = "thanks.html";
+    })
+    .catch((error) => {
+        console.error("Ошибка отправки сообщения:", error);
+        alert("Не удалось отправить сообщение. Попробуйте ещё раз.");
     });
 });
 </script>
