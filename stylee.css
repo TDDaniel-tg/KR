@@ -11,10 +11,20 @@ header {
     color: black;
 }
 
+.button-container {
+    text-align: center;
+    margin-top: 10px; /* Отступ сверху */
+   
+}
+/* Убираем подчеркивание у ссылок */
+a {
+    text-decoration: none;
+}
+
 button {
-    position: fixed;
-    left: 50%; /* Центрируем по горизонтали относительно экрана */
-    transform: translateX(-50%); /* Сдвигаем кнопку влево на половину её ширины */
+    top: 10px;
+    display: inline-block; /* Кнопки в одной строке */
+    margin: 10px; /* Расстояние между кнопками */
     font-size: 1.5em;
     border-radius: 10px;
     border: none;
@@ -23,7 +33,22 @@ button {
     color: white;
     cursor: pointer;
     transition: all 0.3s ease;
+    position: relative; /* Устанавливаем относительное позиционирование */
+    left: 50%; /* Перемещаем контейнер на 50% от ширины экрана */
+    transform: translateX(-50%); /* Сдвигаем контейнер на 50% влево, чтобы центрировать */
+    display: flex;
+    gap: 20px; /* Расстояние между кнопками */
+    outline: none; /* Убираем обводку при фокусе */
 }
+
+button:hover {
+    background-color: #575757;
+}
+
+button:focus {
+    outline: none; /* Убираем обводку при фокусе */
+}
+
 
 button:hover {
     background-color: #575757;
@@ -43,8 +68,6 @@ button:hover {
     button {
         font-size: 1.2em; /* Уменьшаем кнопку */
         padding: 8px 16px;
-        top: 5px;
-        right: 5px;
     }
 }
 
@@ -60,11 +83,7 @@ button:hover {
     }
 
     button {
-        font-size: 1.1em; /* Уменьшаем размер кнопки */
+        font-size: 1em; /* Уменьшаем размер кнопки */
         padding: 6px 12px;
-        left: 50%; /* Центрируем по горизонтали относительно экрана */
-        transform: translateX(-50%); /* Сдвигаем кнопку влево на половину её ширины */  
-    margin-top: 270px;
     }
-    
 }
