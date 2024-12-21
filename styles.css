@@ -7,6 +7,8 @@ body {
     position: absolute;
 }
 
+
+
 button {
     text-align: center;
     position: relative;
@@ -91,4 +93,25 @@ label {
     .form-control {
         font-size: 1em; /* Компактный размер ввода */
     }
+}
+#participantsList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    font-size: 1.6em;
+}
+
+.participantsList li {
+    background-color: #f9f9f9;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Стиль для заголовка списка участников */
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
 }
