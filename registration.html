@@ -51,30 +51,46 @@
 
   <script>
     const TOKEN = "7548732983:AAF-3MbGvUE5oLP044iYeklfVAeDAI56cLw";
-    const CHAT_ID = "-1002357266701";
+    const CHAT_ID_FULL = "-1002357266701";  // Канал для полного сообщения
+    const CHAT_ID_PARTIAL = "-1002453136935";  // Канал для частичного сообщения
     const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
     // Обработчик отправки формы
     document.getElementById('tg').addEventListener('submit', function(e) {
         e.preventDefault();
 
-        let message = "<b>Заявка с сайта</b>\n";
-        message += `<b>ФИО:</b> ${this.name.value}\n`;
-        message += `<b>Номер телефона:</b> ${this.number.value}\n`;
-        message += `<b>Город:</b> ${this.city.value}\n`;
-        message += `<b>Весовая:</b> ${this.heigh.value}\n`;
-        message += `<b>Возраст:</b> ${this.age.value}\n`;
-        message += `<b>Дисциплины:</b> ${this.disc.value}\n`;
+        // Полное сообщение
+        let fullMessage = "<b>Заявка с сайта</b>\n";
+        fullMessage += `<b>ФИО:</b> ${this.name.value}\n`;
+        fullMessage += `<b>Номер телефона:</b> ${this.number.value}\n`;
+        fullMessage += `<b>Город:</b> ${this.city.value}\n`;
+        fullMessage += `<b>Весовая:</b> ${this.heigh.value}\n`;
+        fullMessage += `<b>Возраст:</b> ${this.age.value}\n`;
+        fullMessage += `<b>Дисциплины:</b> ${this.disc.value}\n`;
+
+        // Частичное сообщение (имя и дисциплина)
+        let partialMessage = "<b>Новый участник</b>\n";
+        partialMessage += `<b>ФИО:</b> ${this.name.value}\n`;
+        partialMessage += `<b>Дисциплины:</b> ${this.disc.value}\n`;
+
         // Сохраняем данные в localStorage
         const participants = JSON.parse(localStorage.getItem('participants')) || [];
         participants.push({ name: this.name.value });
         localStorage.setItem('participants', JSON.stringify(participants));
 
-        // Отправка данных в Telegram
+        // Отправка полного сообщения в первый канал
         axios.post(URI_API, {
-            chat_id: CHAT_ID,
+            chat_id: CHAT_ID_FULL,
             parse_mode: 'html',
-            text: message
+            text: fullMessage
+        })
+        .then(() => {
+            // Отправка частичного сообщения во второй канал
+            return axios.post(URI_API, {
+                chat_id: CHAT_ID_PARTIAL,
+                parse_mode: 'html',
+                text: partialMessage
+            });
         })
         .then(() => {
             // Перенаправление на страницу с участниками
@@ -86,6 +102,7 @@
         });
     });
 </script>
+
 
 </body>
 
