@@ -1,19 +1,42 @@
 body {
-    background-color: #B4b4b4;
     font-size: 1.5em;
     margin: 0;
     padding: 0;
+    height: 100vh; /* Устанавливаем высоту на 100% от высоты экрана */
+    overflow: hidden; /* Убираем прокрутку, если она есть */
 }
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('фон.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8; /* Полупрозрачность */
+    z-index: -1; /* Размещаем слой позади содержимого */
+}
+
 
 header {
     text-align: center;
-    margin-top: 50px;
-    color: black;
+    margin-top: 150px;
+    color: #fffff;
+    font-size: 2em;
 }
 
+h2{
+    text-align: center;
+    margin-top: -50px;
+    color: black;
+    font-size: 2em;
+}
 .button-container {
     text-align: center; /* Центровка кнопок по горизонтали */
-    margin-top: 10px; /* Отступ сверху */
+    margin-top: 20px; /* Отступ сверху */
 }
 
 button {
@@ -25,19 +48,24 @@ button {
     border: none;
     padding: 10px 20px;
     background-color: #181818;
-    color: white;
+    color: rgb(255, 255, 255);
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #575757;
+    background-color: #7c7c7c;
+    margin: 10px;
+    border: black;
+    border: 2px;
+    font-size: 2em;
 }
 
 /* Адаптация под планшеты */
 @media (max-width: 768px) {
     body {
         font-size: 1.2em; /* Уменьшаем размер шрифта */
+        opacity: 0.8; /* Полупрозрачность */
     }
 
     header {
@@ -55,6 +83,7 @@ button:hover {
 @media (max-width: 480px) {
     body {
         font-size: 1em; /* Ещё больше уменьшаем шрифт */
+        opacity: 0.9; /* Полупрозрачность */
     }
 
     header {
@@ -74,6 +103,7 @@ button:hover {
         position: relative; /* Устанавливаем относительное позиционирование */
         left: 47%; /* Перемещаем контейнер на 50% от ширины экрана */
         transform: translateX(-50%); /* Сдвигаем контейнер на 50% влево, чтобы центрировать */
+        
     }
 
     a {
