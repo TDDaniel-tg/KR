@@ -63,7 +63,20 @@ button:hover {
     }
 
     button {
+        min-width: 200px;
         font-size: 1em; /* Уменьшаем размер кнопки */
         padding: 6px 12px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Выравнивание по горизонтали */
+        align-items: center; /* Выравнивание по вертикали */
+        text-align: center; 
+        position: relative; /* Устанавливаем относительное позиционирование */
+        left: 47%; /* Перемещаем контейнер на 50% от ширины экрана */
+        transform: translateX(-50%); /* Сдвигаем контейнер на 50% влево, чтобы центрировать */
+    }
+
+    a {
+        text-decoration: none;
     }
 }
