@@ -71,7 +71,7 @@
         // Частичное сообщение (имя и дисциплина)
         let partialMessage = "<b>Новый участник</b>\n";
         partialMessage += `<b>ФИО:</b> ${this.name.value}\n`;
-        partialMessage += `<b>Дисциплины:</b> ${this.disc.value}\n`;
+        partialMessage += `<b>Дисциплина:</b> ${this.disc.value}\n`;
 
         // Сохраняем данные в localStorage
         const participants = JSON.parse(localStorage.getItem('participants')) || [];
