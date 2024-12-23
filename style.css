@@ -13,7 +13,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('фон.jpg');
+    background-image: url('фон.png');
     background-size: cover;
     background-position: center;
     opacity: 0.8; /* Полупрозрачность */
@@ -38,7 +38,11 @@ h2{
     text-align: center; /* Центровка кнопок по горизонтали */
     margin-top: 20px; /* Отступ сверху */
 }
+.location {
+    font-size: 0.8em;
+    margin-top: 200px;
 
+}
 button {
     top: 10px;
     display: inline-block; /* Кнопки в одной строке */
@@ -60,6 +64,20 @@ button:hover {
     border: 2px;
     font-size: 2em;
 }
+
+.logo {
+    position: absolute; /* Абсолютное позиционирование */
+    top: 26px; /* Отступ сверху */
+    left: 50px; /* Отступ слева */
+}
+
+.logo img {
+    width: 70px; /* Устанавливаем ширину логотипа */
+    height: 70px; /* Устанавливаем высоту логотипа */
+    object-fit: cover; /* Подгоняем изображение, сохраняя пропорции */
+    border-radius: 50%; /* Закругляем углы для создания эффекта круга (если нужно) */
+}
+
 
 /* Адаптация под планшеты */
 @media (max-width: 768px) {
@@ -109,4 +127,17 @@ button:hover {
     a {
         text-decoration: none;
     }
+    .logo {
+        position: absolute; /* Абсолютное позиционирование */
+        top: 20px; /* Отступ сверху */
+        left: 10px; /* Отступ слева */
+    }
+    
+    .logo img {
+        width: 50px; /* Устанавливаем ширину логотипа */
+        height: 50px; /* Устанавливаем высоту логотипа */
+        object-fit: cover; /* Подгоняем изображение, сохраняя пропорции */
+        border-radius: 50%; /* Закругляем углы для создания эффекта круга (если нужно) */
+    }
+    
 }

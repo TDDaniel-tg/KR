@@ -9,44 +9,61 @@
 </head>
 
 <body>
+    <div class="data" id="teee">
+        <div class="teeee">
+            <h1>Регистрация участников</h1>
+        </div>
+    </div>
+    <div class="data" id="teeee">
+        <div class="teeee">
+            <h2>
+                Для регистрации необходимо оплатить взнос в размере 1000 сом<br>
+                +996708880838 Оплату производить на этот номер, чек присылать в WhatsApp
+            </h2>
+        </div>
+    </div>
 
- 
-    <div class="container">
-        <h1>Регистрация участников</h1>
-        <form id="tg">
-            <div class="form-group">
-                <label class="form-label">Фамилия Имя Отчество </label>
-                <input type="text" name="name" class="form-control">
-            </div>
     
-            <div class="form-group">
-                <label class="form-label">Номер телефона</label>
-                <input type="text" name="number" class="form-control">
-            </div>
-    
-            <div class="form-group">
-                <label class="form-label">Город</label>
-                <input type="text" name="city" class="form-control">
-            </div>
-    
-            <div class="form-group">
-                <label class="form-label">Весовая категория</label>
-                <input type="number" name="heigh" class="form-control">
-            </div>
-    
-            <div class="form-group">
-                <label class="form-label">Возраст</label>
-                <input type="number" name="age" class="form-control">
-            </div>
-            <div class="form-group">
-                <label class="form-label">Дисциплина</label>
-                <input type="tex" name="disc" class="form-control">
-            </div>
-            <button type="submit">Отправить</button>
-        </form>
-    
-        
-    
+        <div class="button-container">
+            <a href="http://wa.me/996708880838">
+                <button type="button">WhatsApp</button>
+            </a>
+        </div>
+        <form id="tg" class="form-container">
+        <div class="form-group">
+            <label class="form-label">Фамилия Имя Отчество</label>
+            <input type="text" name="name" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Номер телефона</label>
+            <input type="text" name="number" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Город</label>
+            <input type="text" name="city" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Весовая категория</label>
+            <input type="number" name="heigh" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Возраст</label>
+            <input type="number" name="age" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Дисциплина</label>
+            <input type="text" name="disc" class="form-control">
+        </div>
+
+        <button type="submit">Отправить</button>
+    </form>
+</body>
+
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
   <script>
@@ -101,9 +118,23 @@
             alert("Не удалось отправить сообщение. Попробуйте ещё раз.");
         });
     });
+    // Скрываем все сообщения об ошибках
+    errorMessages.forEach(error => error.style.display = 'none');
+
+// Проверяем, чтобы все поля были заполнены
+inputs.forEach(input => {
+    if (input.value.trim() === '') {
+        isValid = false;
+        const error = input.nextElementSibling;
+        if (error && error.classList.contains('error-message')) {
+            error.style.display = 'block';
+        }
+    }
+});
+
 </script>
 
 
-</body>
+
 
 </html>
