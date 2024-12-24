@@ -38,11 +38,18 @@ h2{
     text-align: center; /* Центровка кнопок по горизонтали */
     margin-top: 20px; /* Отступ сверху */
 }
-.location {
-    font-size: 0.8em;
-    margin-top: 200px;
 
+
+.location {
+    min-width: 800px;
+    font-size: 0.8em;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Сдвигаем элемент на половину его ширины */
+    text-align: center; /* Центрируем текст внутри элемента */
 }
+
 button {
     top: 10px;
     display: inline-block; /* Кнопки в одной строке */
