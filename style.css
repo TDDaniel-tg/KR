@@ -130,7 +130,8 @@ button:hover {
         transform: translateX(-50%); /* Сдвигаем контейнер на 50% влево, чтобы центрировать */
         
     }
-
+    .location {
+        min-width: 300px;
     a {
         text-decoration: none;
     }
