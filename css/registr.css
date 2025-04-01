@@ -111,7 +111,7 @@ footer {
     input {
         font-size: 0.8em;
     }
-    form {
+    .form-container  {
         background-color: #ffffff;
         padding: 20px;
         border-radius: 10px;
