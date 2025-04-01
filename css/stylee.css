@@ -1,0 +1,95 @@
+body {
+    background-color: #B4b4b4;
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    margin-top: 50px;
+    color: black;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px; /* Отступ сверху */
+   
+}
+/* Убираем подчеркивание у ссылок */
+a {
+    text-decoration: none;
+}
+
+button {
+    top: 10px;
+    display: inline-block; /* Кнопки в одной строке */
+    margin: 10px; /* Расстояние между кнопками */
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    background-color: #181818;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative; /* Устанавливаем относительное позиционирование */
+    left: 50%; /* Перемещаем контейнер на 50% от ширины экрана */
+    transform: translateX(-50%); /* Сдвигаем контейнер на 50% влево, чтобы центрировать */
+    display: flex;
+    gap: 20px; /* Расстояние между кнопками */
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+button:hover {
+    background-color: #575757;
+}
+
+button:focus {
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+
+button:hover {
+    background-color: #575757;
+}
+footer {
+    background-color: #1e2143;
+    color: #d6d8ee;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+/* Адаптация под планшеты */
+@media (max-width: 768px) {
+    body {
+        font-size: 1.2em; /* Уменьшаем размер шрифта */
+    }
+
+    header {
+        font-size: 1.8em; /* Увеличиваем заголовок */
+        margin-top: 30px;
+    }
+
+    button {
+        font-size: 1.2em; /* Уменьшаем кнопку */
+        padding: 8px 16px;
+    }
+}
+
+/* Адаптация под смартфоны */
+@media (max-width: 480px) {
+    body {
+        font-size: 1em; /* Ещё больше уменьшаем шрифт */
+    }
+
+    header {
+        font-size: 1.5em; /* Уменьшаем заголовок */
+        margin-top: 20px;
+    }
+
+    button {
+        font-size: 1em; /* Уменьшаем размер кнопки */
+        padding: 6px 12px;
+    }
+}

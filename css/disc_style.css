@@ -1,0 +1,54 @@
+body{
+    background-color: #b4b4b4;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    top: 10px;
+    display: inline-block; /* Кнопки в одной строке */
+    margin: 10px; /* Расстояние между кнопками */
+    font-size: 1.5em;
+    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    background-color: #181818;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative; /* Устанавливаем относительное позиционирование */
+    left: 50%; /* Перемещаем контейнер на 50% от ширины экрана */
+    transform: translateX(-50%); /* Сдвигаем контейнер на 50% влево, чтобы центрировать */
+    display: flex;
+    gap: 20px; /* Расстояние между кнопками */
+    outline: none; /* Убираем обводку при фокусе */
+}
+
+button:hover {
+    background-color: #575757;
+}
+
+button:focus {
+    outline: none; /* Убираем обводку при фокусе */
+}
+h1{
+    text-align: center;
+
+}
+li{
+    text-align: center;
+}
+.popup-content{
+    margin-top: 30px;
+    text-align: center;
+    font-size: 1.5em;
+}
+footer {
+    background-color: #1e2143;
+    color: #d6d8ee;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}

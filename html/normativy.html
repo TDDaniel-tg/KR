@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нормативы</title>
+    <link rel="icon" type="image/jpg" href="иконка.jpg">
+    <link rel="stylesheet" href="/css/norm_style.css">
+</head>
+<body>
+    <div class="button-container">
+        <button class="popup-btn" id="popupBtn1">Мужские Нормативы</button>
+        <button class="popup-btn" id="popupBtn2">Женские Нормативы</button>
+    </div>
+
+    <!-- Поп-ап 1 -->
+    <div class="popup" id="popup1">
+        <div class="popup-content">
+            <span class="close" id="close1">&times;</span>
+            <h2>Мужские Нормативы</h2>
+            <h3>Про, жим лежа софт экипировка однопетельная</h3>
+            <img src="/photo/Про, жим лежа софт экипировка однопетельная муж.jpg">
+
+            <h3>Про, народный бицепс</h3>
+            <img src="/photo/Про, народный бицепс муж.jpg" >
+
+            <h3>Про, строгий подьем на бицепс</h3>
+            <img src="/photo/Про, строгий подьем на бицепс муж.jpg" >
+
+            <h3>Про, силовое двоеборье</h3>
+            <img src="/photo/Про, силовое двоеборье муж.jpg" >
+
+            <h3>Про, становая тяга без экип</h3>
+            <img src="/photo/Про, становая тяга без экип муж.jpg" >
+
+            <h3>Про, военный народный жим </h3>
+            <img src="/photo/Про, военный народный жим муж.jpg" >
+
+            <h3>Про жим лежа, без экип</h3>
+            <img src="/photo/Про жим лежа, без экип муж.jpg" >
+
+           
+            <h3>Военный жим 1/2 собственного веса</h3>
+            <img src="/photo/военный.jpg">
+            <h3>Становая тяга без экип</h3>
+            <img src="/photo/становая тяга без экип муж.jpg" >
+            <h3>Силовое двоеборье</h3>
+            <img src="/photo/силовое двоеборье муж.jpg" >
+            <h3>Строгий подъем на бицепс любители</h3>
+            <img src="/photo/строгий подъем на бицепс любители муж.jpg" >
+            <h3>Народный бицепс про</h3>
+            <img src="/photo/народный бицепс про муж.jpg" >
+            <h3>Жим лежа софт экип</h3>
+            <img src="/photo/жим лежа софт экип муж.jpg" >
+            <h3>Народный жим </h3>
+            <img src="/photo/народный жим муж.jpg" >
+            <h3>Армлифтинг</h3>
+            <img src="/photo/Армлифтинг муж.jpg" >
+
+        </div>
+    </div>
+
+    <!-- Поп-ап 2 -->
+    <div class="popup" id="popup2">
+        <div class="popup-content">
+            <span class="close" id="close2">&times;</span>
+            <h2>Женские Нормативы</h2>
+            <h3>Про, жим лежа софт экипировка однопетельная</h3>
+            <img src="/photo/Про, жим лежа софт экипировка однопетельная.jpg">
+            
+            <h3>Про, народный бицепс</h3>
+            <img src="/photo/Про, народный бицепс.jpg">
+
+            <h3>Про, строгий подьем на бицепс</h3>
+            <img src="/photo/Про, строгий подьем на бицепс.jpg">
+
+            <h3>Про, силовое двоеборье</h3>
+            <img src="/photo/Про, силовое двоеборье.jpg">
+
+            <h3>Про, становая тяга без экип</h3>
+            <img src="/photo/Про, становая тяга без экип.jpg">
+
+            <h3>Про, военный народный жим</h3>
+            <img src="/photo/Про, военный народный жим.jpg">
+
+            <h3>Про жим лежа, без экип</h3>
+            <img src="/photo/Про жим лежа, без экип.jpg">
+            
+            <h3>Военный жим</h3>
+            <img src="/photo/женщины военный жим.jpg" alt="женщины военный жим.jpg">
+
+            <h3>Становая тяга без экип</h3>
+            <img src="/photo/становая тяга без экип.jpg" alt="становая тяга без экип.jpg">
+
+            <h3>Cиловое двоеборье</h3>
+            <img src="/photo/силовое двоеборье.jpg">
+
+            <h3>Cтрогий подъем  любители</h3>
+            <img src="/photo/строгий подъем  любители.jpg">
+
+            <h3>Жим лежа софт.экип.</h3>
+            <img src="/photo/жим лежа софт.экип.jpg">
+
+            <h3>Армлифтинг</h3>
+            <img src="/photo/армлифтинг.jpg">
+
+            <h3>Народный бицепс про</h3>
+            <img src="/photo/народный бицепс про.jpg">
+            
+        </div>
+    </div>
+
+    <script>
+        // Получаем элементы
+        const popup1 = document.getElementById('popup1');
+        const popup2 = document.getElementById('popup2');
+        const popupBtn1 = document.getElementById('popupBtn1');
+        const popupBtn2 = document.getElementById('popupBtn2');
+        const close1 = document.getElementById('close1');
+        const close2 = document.getElementById('close2');
+
+        // Функции открытия
+        popupBtn1.addEventListener('click', () => {
+            popup1.style.display = 'flex';
+        });
+
+        popupBtn2.addEventListener('click', () => {
+            popup2.style.display = 'flex';
+        });
+
+        // Функции закрытия
+        close1.addEventListener('click', () => {
+            popup1.style.display = 'none';
+        });
+
+        close2.addEventListener('click', () => {
+            popup2.style.display = 'none';
+        });
+
+        // Закрытие поп-апа при клике вне области
+        window.addEventListener('click', (e) => {
+            if (e.target === popup1) {
+                popup1.style.display = 'none';
+            }
+            if (e.target === popup2) {
+                popup2.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
